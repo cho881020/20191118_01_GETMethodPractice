@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='20191118_01_GETMethodPractice'
