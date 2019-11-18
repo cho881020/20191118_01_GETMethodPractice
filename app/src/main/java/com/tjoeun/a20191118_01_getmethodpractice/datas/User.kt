@@ -8,6 +8,8 @@ class User {
     var name = ""
     var phone = ""
 
+    var category = Category()
+
     companion object {
         fun getUserFromJson(json:JSONObject) : User {
 
@@ -15,6 +17,7 @@ class User {
             user.login_id = json.getString("login_id")
             user.name = json.getString("name")
             user.phone = json.getString("phone")
+            user.category = Category.getCategoryFromJson(json.getJSONObject("category"))
 
             return user
 
